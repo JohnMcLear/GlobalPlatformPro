@@ -1,9 +1,10 @@
-workflow "check_uptime" {
+workflow "build" {
   on = "push"
-  resolves = "uptime"
+  resolves = "mvn"
 }
 
-action "uptime" {
-  uses = "docker://ubuntu:18.04"
-  runs = "uptime"
+action "mvn" {
+  uses = "."
+  runs = "mvn"
+  args = "verify"
 }
