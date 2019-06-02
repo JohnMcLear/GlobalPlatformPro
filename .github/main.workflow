@@ -5,6 +5,5 @@ workflow "build" {
 
 action "mvn" {
   uses = "./mvn"
-  runs = "mvn"
-  args = "verify"
+  runs = "uptime"
 }
