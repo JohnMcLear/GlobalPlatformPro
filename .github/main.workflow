@@ -4,7 +4,7 @@ workflow "build" {
 }
 
 action "mvn" {
-  uses = ".github/mvn"
+  uses = "docker://maven:3.6.0-jdk-8-alpine"
   runs = "mvn"
-  runs = "verify"
+  args = "verify"
 }
