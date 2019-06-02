@@ -4,7 +4,7 @@ workflow "build" {
 }
 
 action "mvn" {
-  uses = "./"
+  uses = "./mvn"
   runs = "mvn"
   args = "verify"
 }
